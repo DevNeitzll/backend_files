@@ -1,3 +1,4 @@
+import os
 
 lista_compras = []
 
@@ -13,11 +14,13 @@ while True:
 
     if opcao == 1:
 
+        os.system('cls')
         item = input('Digite um item: ')
         lista_compras.append(item)
 
     elif opcao == 2:
 
+        os.system('cls')
         if not lista_compras:
             print('A lista está vazia.')
             continue
@@ -39,7 +42,10 @@ while True:
 
         except ValueError:
             print('Digite um indice válido:')
-
+        except IndexError:
+            print('Indice não existente:')
+        except Exception:
+            print('Erro desconhecido')
     
     elif opcao == 3:
 
