@@ -17,6 +17,7 @@ while True:
         os.system('cls')
         item = input('Digite um item: ')
         lista_compras.append(item)
+        os.system('cls')
 
     elif opcao == 2:
 
@@ -35,20 +36,24 @@ while True:
             if 0 <= excluir < len(lista_compras):
                 removido = lista_compras.pop(excluir)
             
+                os.system('cls')
                 print(f'O item {removido} foi removido.')
+                 
 
             else:
                 print('Índice inválido')
 
         except ValueError:
-            print('Digite um indice válido:')
+            print('Digite um indice válido!')
         except IndexError:
-            print('Indice não existente:')
+            print('Indice não existente!')
         except Exception:
             print('Erro desconhecido')
+   
     
     elif opcao == 3:
 
+        os.system('cls')
         if lista_compras:
             print('Lista de compras:')
             for item in lista_compras:
@@ -57,6 +62,8 @@ while True:
             print('A lista está vazia')
     
     elif opcao == 4:
+
+        os.system('cls')
         print('Saindo...')
         break
 
